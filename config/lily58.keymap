@@ -10,6 +10,12 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
+    sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder &right_encoder>;
+        triggers-per-rotation = <20>;
+    };
+
     behaviors {
         tdCSP: tap_dance_caps {
             compatible = "zmk,behavior-tap-dance";
@@ -21,7 +27,6 @@
     };
 
     keymap {
-        &left_encoder { resolution = <2>; };
         compatible = "zmk,keymap";
 
         default_layer {
