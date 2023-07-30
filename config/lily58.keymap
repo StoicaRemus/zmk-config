@@ -10,14 +10,6 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
-    left_encoder: encoder_left {
-    compatible = "alps,ec11";
-    label = "LEFT_ENCODER";
-    a-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-    b-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-    steps = <80>;
-    };
-
     behaviors {
         tdCSP: tap_dance_caps {
             compatible = "zmk,behavior-tap-dance";
@@ -39,7 +31,7 @@
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //                     | ALT  | GUI  | LOWER|  SPACE |  | BSPC | RAISE| ENTER  | GUI   |
             bindings = <
-&ESC      &kp N1 &kp N2 &kp N3   LA(F4) N4   &kp N5                     &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp GRAVE
+&ESC      &kp N1 &kp N2 &kp N3   LALT(F4) N4   &kp N5                     &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp GRAVE
 &kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                      &mt LC(Y) Y  &kp U    &kp I     &kp O   &kp P    &kp MINUS
 &kp LCTRL &kp A  &kp S  &kp D    &kp F    &kp G                      &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
 &tdCSP    &mt LC(Z) Z  &mt LC(X) X  &mt LC(C) C     &mt LC(V) V    &kp B  &kp LBKT   &kp RBKT &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
