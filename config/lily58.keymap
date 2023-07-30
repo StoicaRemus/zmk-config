@@ -10,13 +10,13 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
-//    left_encoder: encoder_left {
-//        compatible = "alps,ec11";
-//        label = "LEFT_ENCODER";
-//        a-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-//       b-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-//        steps = <80>;
-//    };
+    left_encoder: encoder_left {
+        compatible = "alps,ec11";
+        label = "LEFT_ENCODER";
+        a-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <20>;
+    };
 
     behaviors {
         tdCSP: tap_dance_caps {
