@@ -21,6 +21,7 @@
     };
 
     keymap {
+        &left_encoder { resolution = <2>; };
         compatible = "zmk,keymap";
 
         default_layer {
@@ -74,7 +75,7 @@
                         &trans  &trans  &trans    &trans   &trans    &trans      &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp LC(LS(TAB)) LC(TAB)>;
         };
     };
 };
