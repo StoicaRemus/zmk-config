@@ -10,10 +10,6 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
-    &mt {
-    tapping-term-ms = <400>;
-    };
-
     behaviors {
         tdCSP: tap_dance_caps {
             compatible = "zmk,behavior-tap-dance";
